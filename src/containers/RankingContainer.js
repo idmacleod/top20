@@ -1,4 +1,5 @@
 import React from 'react';
+import RankingList from '../components/RankingList';
 
 class RankingContainer extends React.Component {
     constructor(props) {
@@ -17,7 +18,10 @@ class RankingContainer extends React.Component {
 
     render() {
         return (
-            <h1>iTunes Top 20</h1>
+            <div className="ranking-container">
+                <h1>iTunes Top 20</h1>
+                <RankingList entries={this.state.entries} />
+            </div>
         );
     }
 }
