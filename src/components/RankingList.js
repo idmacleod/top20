@@ -1,14 +1,15 @@
 import React from 'react';
+import RankingDetails from './RankingDetails';
 
 const RankingList = (props) => {
     const list = props.entries.map((entry, index) => {
-        return <li key={index}>{entry['im:name'].label}</li>
+        return <RankingDetails rank={index + 1} entry={entry} />
     });
 
     return (
-        <ul>
+        <ol>
             {list}
-        </ul>
+        </ol>
     );
 }
 
