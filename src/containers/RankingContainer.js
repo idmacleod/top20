@@ -19,7 +19,7 @@ class RankingContainer extends React.Component {
     render() {
         return (
             <div className="ranking-container">
-                <h1>iTunes Top 20</h1>
+                <h1>iTunes UK Top 20 ~ ~ ~</h1>
                 <RankingList entries={this.state.entries} />
             </div>
         );

@@ -3,13 +3,13 @@ import RankingDetails from './RankingDetails';
 
 const RankingList = (props) => {
     const list = props.entries.map((entry, index) => {
-        return <RankingDetails key={index} rank={index + 1} entry={entry} />
+        return <RankingDetails key={index} position={index + 1} entry={entry} />
     });
 
     return (
-        <ol>
+        <div className="ranking-list">
             {list}
-        </ol>
+        </div>
     );
 }
 

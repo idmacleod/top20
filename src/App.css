@@ -1,1 +1,43 @@
+.ranking-container {
+    font-family: 'Inconsolata', monospace;
+    color: #162554
+}
+
+h1 {
+    margin: 30px;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.ranking-details {
+    display: flex;
+    align-items: center;
+    margin: 40px 20px;
+    border: 2px solid #162554;
+    border-radius: 50px;
+    width: 1000px;
+}
+
+.position {
+    width: 100px;
+    text-align: center;
+    font-family: 'Major Mono Display', monospace;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 5px;
+}
+
+.title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+audio {
+    outline: none;
+    margin: 10px 0;
+}
 
