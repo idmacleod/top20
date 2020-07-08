@@ -1,29 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import RankingList from '../components/RankingList';
 
-class RankingContainer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            entries: [],
-            selectedEntry: {} 
-        }
-    }
+const RankingContainer = (props) => {
+    const [entries, setEntries] = useState([]);
 
-    componentDidMount() {
+    useEffect(() => {
         fetch('https://itunes.apple.com/gb/rss/topsongs/limit=20/json')
-        .then(res => res.json())
-        .then(data => this.setState({entries: data.feed.entry}));
-    }
+            .then(res => res.json())
+            .then(data => setEntries(data.feed.entry));
+        },
+    []);
 
-    render() {
-        return (
-            <div className="ranking-container">
-                <h1>iTunes UK Top 20 ~ ~ ~</h1>
-                <RankingList entries={this.state.entries} />
-            </div>
-        );
-    }
+    return (
+        <div className="ranking-container">
+            <h1>iTunes UK Top 20 ~ ~ ~</h1>
+            <RankingList entries={entries} />
+        </div>
+    );
 }
 
 export default RankingContainer;
