@@ -8,8 +8,7 @@ const RankingContainer = (props) => {
         fetch('https://itunes.apple.com/gb/rss/topsongs/limit=20/json')
             .then(res => res.json())
             .then(data => setEntries(data.feed.entry));
-        },
-    []);
+    }, []);
 
     return (
         <div className="ranking-container">
